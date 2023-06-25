@@ -1,11 +1,12 @@
 package org.udesc.program;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class DashboardActivity extends AppCompatActivity {
+
     private static final String TAG = "LIFE_CYCLE";
 
     @Override
@@ -19,6 +20,4 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Log.i(TAG, "onStart");
     }
-
-
 }
