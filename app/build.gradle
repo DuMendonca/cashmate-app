@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'org.udesc.program'
-    compileSdk 30
+    compileSdk 33
 
     defaultConfig {
         applicationId "org.udesc.program"

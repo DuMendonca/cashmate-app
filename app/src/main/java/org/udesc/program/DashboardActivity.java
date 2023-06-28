@@ -3,7 +3,9 @@ package org.udesc.program;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,13 +17,20 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-        Bundle bundle = intent.getBundleExtra("bundle");
-        String name = bundle.getString("name");
         setContentView(R.layout.activity_dashboard);
 
+        Button button = findViewById(R.id.button);
+
+        button.setOnClickListener(view -> onClick());
+
         Log.i(TAG, "onCreate");
+    }
+
+    private void onClick() {
+        Intent intent = new Intent(
+                getApplicationContext(),
+                ViewExpenseActivity.class);
+        startActivity(intent);
     }
 
     protected void onStart() {
