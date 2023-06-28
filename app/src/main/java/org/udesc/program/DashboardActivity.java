@@ -20,16 +20,14 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         Button button = findViewById(R.id.button);
-
         button.setOnClickListener(view -> onClick());
 
         Log.i(TAG, "onCreate");
     }
 
     private void onClick() {
-        Intent intent = new Intent(
-                getApplicationContext(),
-                ViewExpenseActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ViewExpenseActivity.class);
+
         startActivity(intent);
     }
 

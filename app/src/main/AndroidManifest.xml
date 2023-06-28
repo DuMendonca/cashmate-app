@@ -16,7 +16,7 @@
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".EditActivity"
+            android:name=".EditExpenseActivity"
             android:exported="false" />
         <activity
             android:name=".NewExpenseActivity"
