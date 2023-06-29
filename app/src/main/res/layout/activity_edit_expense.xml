@@ -3,8 +3,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard"
-    tools:context=".EditExpenseActivity"
+    tools:context=".NewExpenseActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/EditExpenseButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:text="Deletar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Space"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/EditExpenseTextValue"
+        app:layout_constraintBottom_toTopOf="@+id/TableRow"
+        android:layout_marginTop="10dp" />
+
+    <Space
+        android:id="@+id/Space"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/EditExpenseButtonDelete"
+        app:layout_constraintBottom_toTopOf="@+id/TableRow"
+        app:layout_constraintEnd_toStartOf="@+id/EditExpenseButtonAccept" />
+
+    <Button
+        android:id="@+id/EditExpenseButtonAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FF00"
+        android:text="Confirmar"
+        app:layout_constraintStart_toEndOf="@+id/Space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/TableRow"
+        app:layout_constraintTop_toBottomOf="@+id/EditExpenseTextValue"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/EditExpenseTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Dispesa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <Spinner
+        android:id="@+id/EditExpenseSpinnerMonth"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="276dp" />
+
+    <Spinner
+        android:id="@+id/EditExpenseSpinnerTAG"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/EditExpenseSpinnerMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/EditExpenseTextDescription"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginTop="160dp" />
+
+    <EditText
+        android:id="@+id/EditExpenseTextValue"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/EditExpenseTextDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginTop="20dp" />
+
+    <TableRow
+        android:id="@+id/TableRow"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#CCCCCC"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
