@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CashMate App</string>
+    <string name="view_name">Visualizar Gasto</string>
+    <string name="dashboard_name">Dashboard</string>
+    <string name="edit_name">Editar Gasto</string>
+    <string name="add_name">Adicionar Novo Gasto</string>
+</resources>

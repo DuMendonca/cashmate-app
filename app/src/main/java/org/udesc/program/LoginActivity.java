@@ -28,33 +28,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void doLogin() {
-        ContentResolver contentResolver = getContentResolver();
-        Uri uri = ContactsContract
-                .CommonDataKinds.Phone.CONTENT_URI;
-        Cursor cursor = contentResolver
-                .query(uri,
-                        null,
-                        null,
-                        null,
-                        null);
-
-        if (cursor.getCount() > 0 && cursor.moveToNext()) {
-            @SuppressLint("Range")
-            String name = cursor
-                    .getString(cursor
-                            .getColumnIndex(ContactsContract
-                                    .CommonDataKinds
-                                    .Phone
-                                    .DISPLAY_NAME));
-
             Intent intent = new Intent(
-                    this,
-                    DashboardActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("name", name);
-            intent.putExtra("bundle", bundle);
+                    getApplicationContext(),
+                    ViewExpenseActivity.class);
 
             startActivity(intent);
-        }
     }
 }
