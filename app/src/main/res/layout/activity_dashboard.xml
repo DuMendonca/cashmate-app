@@ -3,23 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard"
-    tools:context=".DashboardActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".DashboardActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="196dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="327dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/spinner"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="336dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="224dp"
+        android:alpha="@android:dimen/notification_large_icon_width"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboardName" />
+
+
+    <TextView
+        android:id="@+id/dashboardName"
+        style="@style/Widget.MaterialComponents.TextView"
+        android:layout_width="312dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="@android:dimen/app_icon_size"
+        android:text="@string/dashboard_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColorHighlight="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="413dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:contentDescription="View Of Expenses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <ImageButton
+            android:id="@+id/btnDashboard"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Dashboard Button"
+            app:srcCompat="@drawable/baseline_account_circle_24" />
+
+        <ImageButton
+            android:id="@+id/btnView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="View Buttton"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Add Button"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

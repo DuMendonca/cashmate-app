@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/baseline_monetization_on_24"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_foreground"
+        android:roundIcon="@drawable/baseline_monetization_on_24"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanceApp"
         tools:targetApi="31">
@@ -16,13 +16,13 @@
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".EditActivity"
-            android:exported="false" />
-        <activity
             android:name=".NewExpenseActivity"
             android:exported="false" />
         <activity
             android:name=".ViewExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
