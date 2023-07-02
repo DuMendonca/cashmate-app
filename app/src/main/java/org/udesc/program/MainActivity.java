@@ -4,7 +4,6 @@ package org.udesc.program;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.TextView;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
@@ -13,7 +12,6 @@ public class MainActivity
 
     // Create the object of TextView
     // and PieChart class
-    public TextView tvR, tvPython, tvCPP, tvJava;
     public PieChart pieChart;
 
     @Override
@@ -27,10 +25,7 @@ public class MainActivity
         // Link those objects with their
         // respective id's that
         // we have given in .XML file
-        tvR = findViewById(R.id.tvR);
-        tvPython = findViewById(R.id.tvPython);
-        tvCPP = findViewById(R.id.tvCPP);
-        tvJava = findViewById(R.id.tvJava);
+
         pieChart = findViewById(R.id.piechart);
 
         // Creating a method setData()
@@ -41,33 +36,42 @@ public class MainActivity
     private void setData()
     {
 
-        // Set the percentage of language used
-        tvR.setText(Integer.toString(40));
-        tvPython.setText(Integer.toString(30));
-        tvCPP.setText(Integer.toString(5));
-        tvJava.setText(Integer.toString(25));
-
         // Set the data and color to the pie chart
         pieChart.addPieSlice(
                 new PieModel(
-                        "R",
-                        Integer.parseInt(tvR.getText().toString()),
+                        "Lazer",
+                        40,
                         Color.parseColor("#FFA726")));
         pieChart.addPieSlice(
                 new PieModel(
-                        "Python",
-                        Integer.parseInt(tvPython.getText().toString()),
+                        "Alimentação",
+                        30,
                         Color.parseColor("#66BB6A")));
         pieChart.addPieSlice(
                 new PieModel(
-                        "C++",
-                        Integer.parseInt(tvCPP.getText().toString()),
+                        "Transporte",
+                        5,
                         Color.parseColor("#EF5350")));
         pieChart.addPieSlice(
                 new PieModel(
-                        "Java",
-                        Integer.parseInt(tvJava.getText().toString()),
+                        "Saúde",
+                        24,
                         Color.parseColor("#29B6F6")));
+        pieChart.addPieSlice(
+                new PieModel(
+                        "Moradia",
+                        37,
+                        Color.parseColor("#5529F6")));
+        pieChart.addPieSlice(
+                new PieModel(
+                        "Emergência",
+                        5,
+                        Color.parseColor("#E46510")));
+        pieChart.addPieSlice(
+                new PieModel(
+                        "Outros",
+                        25,
+                        Color.parseColor("#68351D")));
 
         // To animate the pie chart
         pieChart.startAnimation();
