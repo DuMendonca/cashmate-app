@@ -231,7 +231,7 @@
         android:layout_marginTop="250dp" />
 
     <ListView
-        android:id="@+id/dashboardListView"
+        android:id="@+id/DashboardListView"
         android:layout_width="313dp"
         android:layout_height="313dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -239,5 +239,41 @@
         app:layout_constraintTop_toTopOf="@+id/dashboardSpinner"
         android:layout_marginTop="71dp">
     </ListView>
+
+    <TableRow
+        android:id="@+id/TableRow"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#CCCCCC"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <ImageButton
+            android:id="@+id/DashboardIButton1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/DashboardIButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/DashboardIButton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/DashboardIButton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/btn_star" />
+    </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

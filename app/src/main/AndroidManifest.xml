@@ -19,7 +19,7 @@
             android:name=".ViewExpenseActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DashboardActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
