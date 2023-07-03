@@ -25,7 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboardName" />
 
-
     <TextView
         android:id="@+id/dashboardName"
         style="@style/Widget.MaterialComponents.TextView"
