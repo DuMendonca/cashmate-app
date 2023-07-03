@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard"
-    tools:context=".NewExpenseActivity"
+    tools:context=".activities.NewExpenseActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/NewExpenseButtonDelete"
+        android:id="@+id/newExpenseButtonDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF0000"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Space"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/NewExpenseTextValue"
+        app:layout_constraintTop_toBottomOf="@+id/newExpenseTextValue"
         app:layout_constraintBottom_toTopOf="@+id/TableRow"
         android:layout_marginTop="10dp" />
 
@@ -24,12 +24,12 @@
         android:id="@+id/Space"
         android:layout_width="16dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/NewExpenseButtonDelete"
+        app:layout_constraintStart_toEndOf="@+id/newExpenseButtonDelete"
         app:layout_constraintBottom_toTopOf="@+id/TableRow"
-        app:layout_constraintEnd_toStartOf="@+id/NewExpenseButtonAccept" />
+        app:layout_constraintEnd_toStartOf="@+id/newExpenseButtonAccept" />
 
     <Button
-        android:id="@+id/NewExpenseButtonAccept"
+        android:id="@+id/newExpenseButtonAccept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FF00"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBottom_toTopOf="@+id/TableRow"
-        app:layout_constraintTop_toBottomOf="@+id/NewExpenseTextValue"
+        app:layout_constraintTop_toBottomOf="@+id/newExpenseTextValue"
         android:layout_marginTop="10dp" />
 
     <TextView
@@ -47,30 +47,31 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/add_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/NewExpenseSpinnerMonth"
+        android:id="@+id/newExpenseSpinnerMonth"
         android:layout_width="313dp"
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NewExpenseTextValue" />
+        app:layout_constraintTop_toBottomOf="@+id/newExpenseTextValue" />
 
     <Spinner
-        android:id="@+id/NewExpenseSpinnerTAG"
+        android:id="@+id/newExpenseSpinnerTAG"
         android:layout_width="313dp"
         android:layout_height="51dp"
-        app:layout_constraintTop_toBottomOf="@+id/NewExpenseSpinnerMonth"
+        app:layout_constraintTop_toBottomOf="@+id/newExpenseSpinnerMonth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp" />
 
     <EditText
-        android:id="@+id/NewExpenseTextDescription"
+        android:id="@+id/newExpenseTextDescription"
         android:layout_width="313dp"
         android:layout_height="51dp"
         android:layout_marginTop="160dp"
@@ -84,14 +85,14 @@
         app:layout_constraintWidth_default="wrap" />
 
     <EditText
-        android:id="@+id/NewExpenseTextValue"
+        android:id="@+id/newExpenseTextValue"
         android:layout_width="313dp"
         android:layout_height="51dp"
         android:background="@android:drawable/editbox_background_normal"
         android:ems="10"
         android:hint="@string/value_text"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/NewExpenseTextDescription"
+        app:layout_constraintTop_toBottomOf="@+id/newExpenseTextDescription"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_default="wrap"
@@ -105,26 +106,31 @@
         app:layout_constraintBottom_toBottomOf="parent" >
 
         <ImageButton
-            android:id="@+id/NewExpenseIButton1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_home"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:background="@android:color/transparent"
+            android:contentDescription="Button for Home"
+            app:srcCompat="@drawable/baseline_home" />
 
         <ImageButton
-            android:id="@+id/NewExpenseIButton2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:contentDescription="Button for Add"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_add" />
 
         <ImageButton
-            android:id="@+id/NewExpenseIButton3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_view"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
-
+            android:contentDescription="Button for View"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_view" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

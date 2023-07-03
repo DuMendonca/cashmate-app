@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard"
-    tools:context=".NewExpenseActivity"
+    tools:context=".activities.NewExpenseActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -222,7 +222,7 @@
     </RelativeLayout>
 
     <Spinner
-        android:id="@+id/dashboardSpinner"
+        android:id="@+id/dashboardSpinnerMouth"
         android:layout_width="313dp"
         android:layout_height="51dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -236,7 +236,7 @@
         android:layout_height="313dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dashboardSpinner"
+        app:layout_constraintTop_toTopOf="@+id/dashboardSpinnerMouth"
         android:layout_marginTop="71dp">
     </ListView>
 
@@ -248,26 +248,31 @@
         app:layout_constraintBottom_toBottomOf="parent" >
 
         <ImageButton
-            android:id="@+id/DashboardIButton1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_home"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:background="@android:color/transparent"
+            android:contentDescription="Button for Home"
+            app:srcCompat="@drawable/baseline_home" />
 
         <ImageButton
-            android:id="@+id/DashboardIButton2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:contentDescription="Button for Add"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_add" />
 
         <ImageButton
-            android:id="@+id/DashboardIButton3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_view"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
-
+            android:contentDescription="Button for View"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_view" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

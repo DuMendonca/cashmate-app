@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".LoginActivity"
+        tools:context=".activities.LoginActivity"
         tools:ignore="MissingConstraints"
         tools:visibility="visible">
 
@@ -76,6 +76,7 @@
             android:layout_marginBottom="11dp"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/baseline_account_circle_24" />

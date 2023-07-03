@@ -1,16 +1,13 @@
-package org.udesc.program;
+package org.udesc.program.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.widget.Button;
+
+import org.udesc.program.R;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LIFE_CYCLE";

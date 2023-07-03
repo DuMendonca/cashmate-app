@@ -5,17 +5,18 @@
     android:id="@+id/view_expense"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewExpenseActivity">
+    tools:context=".activities.ViewExpenseActivity">
 
     <ListView
-        android:id="@+id/ViewExpenseListView"
-        android:layout_width="413dp"
-        android:layout_height="629dp"
+        android:id="@+id/viewExpenseListView"
+        android:layout_width="412dp"
+        android:layout_height="579dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="25dp"
         app:layout_constraintBottom_toTopOf="@+id/TableRow"
         app:layout_constraintEnd_toEndOf="@+id/TableRow"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_id" />
 
@@ -29,7 +30,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/view_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/ViewExpenseListView"
+        app:layout_constraintBottom_toTopOf="@+id/viewExpenseListView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,26 +43,31 @@
         app:layout_constraintBottom_toBottomOf="parent" >
 
         <ImageButton
-            android:id="@+id/ViewExpenseListIButton1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_home"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:background="@android:color/transparent"
+            android:contentDescription="Button for Home"
+            app:srcCompat="@drawable/baseline_home" />
 
         <ImageButton
-            android:id="@+id/ViewExpenseListIButton2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:contentDescription="Button for Add"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_add" />
 
         <ImageButton
-            android:id="@+id/ViewExpenseListIButton3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_view"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
-
+            android:contentDescription="Button for View"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/baseline_view" />
     </TableRow>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

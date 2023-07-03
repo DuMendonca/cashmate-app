@@ -9,4 +9,17 @@
     <string name="accept_button">Accept</string>
     <string name="description_text">Description</string>
     <string name="login">Login</string>
+    <string name="id">ID</string>
+    <string name="tag">Tag</string>
+    <string name="description">Description</string>
+    <string name="mouthofyear">Mouth Of Year</string>
+    <string name="delete_expense_button">Delete Expense</string>
+    <string name="accept_expense_button">Accept Expense</string>
+    <string-array name="str2">
+        <item>Data 1</item>
+        <item>Data 2</item>
+        <item>Data 3</item>
+        <item>Data 4</item>
+        <item>Data 5</item>
+    </string-array>
 </resources>
