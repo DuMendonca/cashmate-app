@@ -4,4 +4,8 @@
     <string name="dashboard_name">Dashboard</string>
     <string name="edit_name">Edit Expense</string>
     <string name="add_name">Add New Expense</string>
+    <string name="value_text">Value</string>
+    <string name="delete_button">Delete</string>
+    <string name="accept_button">Accept</string>
+    <string name="description_text">Description</string>
 </resources>

@@ -5,4 +5,8 @@
     <string name="dashboard_name">Dashboard</string>
     <string name="edit_name">Editar Gasto</string>
     <string name="add_name">Adicionar Novo Gasto</string>
+    <string name="delete_button">Deletar</string>
+    <string name="accept_button">Aceitar</string>
+    <string name="description_text">Descrição</string>
+    <string name="value_text">Valor</string>
 </resources>
