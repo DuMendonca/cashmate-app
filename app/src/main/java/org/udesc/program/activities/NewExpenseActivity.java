@@ -172,7 +172,7 @@ public class NewExpenseActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url("http://localhost:8080/expense/" + id)
-                .put(requestBody)
+                .post(requestBody)
                 .build();
         try {
             Call call = client.newCall(request);
