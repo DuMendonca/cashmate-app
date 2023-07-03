@@ -8,4 +8,5 @@
     <string name="delete_button">Delete</string>
     <string name="accept_button">Accept</string>
     <string name="description_text">Description</string>
+    <string name="login">Login</string>
 </resources>

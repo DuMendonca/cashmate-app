@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private void doLogin() {
             Intent intent = new Intent(
                     getApplicationContext(),
-                    MainActivity.class);
+                    DashboardActivity.class);
 
             startActivity(intent);
     }
