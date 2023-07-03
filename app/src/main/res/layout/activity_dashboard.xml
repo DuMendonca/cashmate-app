@@ -268,12 +268,6 @@
             android:layout_weight="1"
             app:srcCompat="@android:drawable/btn_star" />
 
-        <ImageButton
-            android:id="@+id/DashboardIButton4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/btn_star" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
